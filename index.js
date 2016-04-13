@@ -93,7 +93,7 @@ function wkhtmltopdf(input, options, callback) {
       callback(null, stream); // stream is child.stdout
     }
   });
-    
+
   // setup error handling
   var stderrMessages = [];
   var stream = child.stdout;
@@ -134,7 +134,7 @@ function wkhtmltopdf(input, options, callback) {
       stream.emit('error', errObj);
     }
   }
-  
+
   child.once('error', function(err) {
     throw new Error(err); // critical error
   });
@@ -156,5 +156,5 @@ function wkhtmltopdf(input, options, callback) {
   return stream;
 }
 
-wkhtmltopdf.command = 'wkhtmltopdf';
+wkhtmltopdf.command = 'usr/local/bin/wkhtmltopdf';
 module.exports = wkhtmltopdf;
