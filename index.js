@@ -156,5 +156,5 @@ function wkhtmltopdf(input, options, callback) {
   return stream;
 }
 
-wkhtmltopdf.command = 'usr/local/bin/wkhtmltopdf';
+wkhtmltopdf.command = '/usr/local/bin/wkhtmltopdf';
 module.exports = wkhtmltopdf;
